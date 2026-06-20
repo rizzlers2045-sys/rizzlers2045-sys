@@ -1,0 +1,72 @@
+/*
+** Copyright © 2026 Apple Inc.
+** All rights reserved.
+*/
+
+.dialog-modal-shield{position:fixed;left:0;right:0;top:0;bottom:0;z-index:4000}
+.dialog-modal-shield.shaded-shield{background-color:#000;opacity:.50}
+.dialog-container{outline:0;position:fixed;width:495px;padding:5px 10px 8px;max-height:495px;font-size:12px;z-index:4001;color:#1b1b1b;-webkit-border-image:url(da-storefront/images/-dsi-/popup-bg.png) 32 46 60 46 / 16px 23px 30px 23px stretch stretch}
+.dialog-container .dialog-ack{padding:10px;margin:0 25px;color:#333}
+.dialog-container .dialog-content{opacity:0}
+.dialog-buttons{margin-top:8px;margin-right:1px;text-align:right}
+.dialog-button{-webkit-border-radius:99px;border-radius:99px;padding:3px 15px;font-size:13px;background:-webkit-gradient(linear,left top,left bottom,from( #f3f3f3),color-stop(0.05, #eee),color-stop(0.48, #e2e2e2),color-stop(0.50, #ccc),color-stop(0.54, #dcdcdc),color-stop(0.96, #ccc),to( #e5e5e5));border:1px solid #9fa0a2;color:#464646;margin-left:5px;min-width:72px}
+.dialog-button:hover{background:-webkit-gradient(linear,left top,left bottom,from( #e5e5e5),color-stop(0.05, #d4d4d4),color-stop(0.48, #c8c8c8),color-stop(0.50, #b2b2b2),color-stop(0.54, #c3c3c3),color-stop(0.96, #b2b2b2),to( #cbcbcb))}
+.dialog-button:active{background:-webkit-gradient(linear,left top,left bottom,from( #cbcbcb),color-stop(0.05, #b2b2b2),color-stop(0.48, #c3c3c3),color-stop(0.54, #c8c8c8),color-stop(0.96, #dcdcdc),to( #e5e5e5))}
+.dialog-button[disabled],.dialog-button[disabled]:hover,.dialog-button[disabled]:active{background:-webkit-gradient(linear,left top,left bottom,from( #f3f3f3),color-stop(0.05, #eee),color-stop(0.96, #dcdcdc),to( #e5e5e5));border:1px solid #BBB;color:#AAA}
+.dialog-submit-button{font-weight:bold}
+a.close-preview{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAACXBIWXMAAAsTAAALEwEAmpwYAAACcUlEQVRYw+2Yv2siQRTHvX/ATkiKVCEB+3jXhUCwM+eSPbGJjSQWuUKC3cFVR5pwf4P4FwQR01hcEaIg/gHHEYKiomKTwvLQyfuGt8eymVlnvTEY4oMvLPPjvQ/7Zt7ObEgIEVpFhdZg7x6MbIO0R0qQjklnrGNuQ9/Gq4GRxUifSTlNYexH0oelgJFtk744AePx+LdyuXzd6XR+j0ajzmw2m0J4Rhv6MMYFmIIPo2Bk+06AfD5/1e12/whN6/V694VC4acLcN8IGNkhHIbD4fN6vf5LLGiYCx8Md/hfYGQHcBSNRi+CvCWVwQd8MdzBQmBkO3AQiUS+DgaDtjBk8AWfDLezCJiFyc1m81YYNvhkMCsQGNegXDabvfQLMBwOlX3ttv9Lhm+G2wsClsQkbHuV42q1KtLptGg0Gi/60Ia+UqmkBINvBktqgZFtYUImk/nhB2Xb9rO8cA6U0+8HhxgMt6UDhsqeq9VqN6r0pVKpf4HdcF4oCGNVaUUMBovpgCXmpREAMjgZlCzVknQmdMBOMHgymTz6LV4ZXBAoGGIw2IkO2CkGT6fTv/O2vQpOBwqGGAx2ahzMmz7ZhjAFpp1KGVQQuKCp1Fr8soWu2q2mFv/ccqHafardaqpczC2wlUpFudC9cMVi0UyBdX+S/I46gFPtPgfODwq+A32S3Ol8pY947O0fe1b6oLiyR2vZZaTVat0tCoW5xi4jsusbrmL9fv9BFwhjl3J9c8Ht8qX1OYBlWd+pZJSRnvF43HVA8Iw29GGM58K7u5RfBLjmkz45dU5TSZ6znF8EEshNrndHJNsFYnMb+jbXv6HWYKsK9gTbcyYKqPDW8gAAAABJRU5ErkJggg==);-webkit-background-size:19px 19px;width:19px;height:19px;top:6px;left:5px;position:absolute;opacity:0;-webkit-transition:opacity .1s ease-out;opacity:1;z-index:4001}
+a.close-preview:hover{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAACXBIWXMAAAsTAAALEwEAmpwYAAACbklEQVRYw+2Yv08iQRTHsaej0cJK9C8QLUiMybZ4bHaFypCQIIVX2V5iZWwuQkeooKQgxNjY8sNASwkYYzT+A/4BF7P3vuat2ezNLLM4EC4yyTchM2/e+4Q37+3ORhzHiSyjIiuwbw9GY520S0qRLNIpy+I5rK0vDIxGgvSDVFQUbPdIa3MBo7FFOnYDJpPJX5VK5abdbo8Hg8HLeDx+h/Abc1iDjQcwAx9awWgcuAFyudzvbrf7MJlMHBWR7WM+n7/2AB5oAaNhwGE0Gj1rNBptVSC/sBc+GM74EhiNQziKx+PnYf6lgH/vAb4Y7nAmMBrbcBCLxX72+/3nr0K5gi/4ZLjtWcBMbG42m/e6oFzBJ4OZocC4BxUty7oKCkAVKF3rdDqBcPDNcLthwNLYhLKXOa7X6042m3VardY/a5jDWrlcloLBN4OllcBobGKDaZqXQVC2bX/ID+dCuetBcIjBcJsqYOjsRQp+J0tfJpP5DOyF80NBsJWlFTEYLKEClpqWRgCI4ERQolQL0plSATuB8XA4fAs6vCK4MFAQYjDYiQpYAcaj0ejPtLKXwalAQYjBYAXtYP70iQpCF5hyKkVQYeDCplLp8IsOuqxadR3+qe1CVn2yatXVLqY22FqtJj3ofrhSqaSnwXofSUGvOoCTVZ8LFwQF36EeSd50Lughnvj/X3uW+kVxaV+tRZcROtT9WaGwV9tlRHR9w1Ws1+s9qQLBdi7XNw/cDl9aPwIYhnFRrVZvkR6qzldPpb5iDmuw8V14d+byiQDXfNK+2+cUleY9a4v6qLLB/e6IZHtAbJ7D2sbqM9QKbFnB/gLhTlu3WBsDUQAAAABJRU5ErkJggg==);-webkit-background-size:19px 19px}
+a.close-preview:active{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6ElEQVRYw+2Yy4qaMRTHna0L1zMLV2XmAWRscTOMF3Bj+w0zdjfLqYvOqjsRKkItYqkL3QjuvCII0k29KzrUZyillJa+QB+glDT/j0RCGploo1hq4I8hOTn5kXO+XHQQQhy7KMce7L8Ho+WQ6pQqQnVJ9YzpkrWh73BrYLR4qZ5QxTQF24dUBxsBo+UBVZRP6PF4Eslksl0ulz82Go1vnU7nF4Q62tAHGwHwKXwYBaPljE9gWdabSqXyqdvtEh1Vq9XP0Wj0rQB4ZgSMliAcOp3O57lcbqILJAtj4YPBBf8KjJZzOHK73S9Uq9Tr9ZaCqPrgA74Y3PlaYLQcw4HL5bqt1+tfxQl11O/3/2jDePiCTwZ3vA7YBQbn8/k7EQoTDgYDW8PhcFGXJfaJkPADnwzsYiUwtgfFwuHwaxXUaDQi4/GYtFot+xdCG2+H6Ne5aBfhuD/4ZnCnq4BZGITPXgTjUJPJhGSzWRIKhUixWCSz2YxMp1NbqKMNfYlEwrblcCIYfDMwSwuMFjcGBAKBV3IywzlWAVB+v98WAEqlEpnP57ZQRxvvBxzGyGAQ5mBwbh0w7OyxdDr9Xk545A3CFwwGFxOLcDIUBFuEFWPlcGIOBubVAYvIYZRXDKFSwamgYLtsxYRwRnTArmHcbrd/LANDHmF1ZDgZCjawXQaGORjYtQ7YDYzpufdTBYZERpLzfFLBcSjYwFaV/BDmYGA3xsHk8MkfhEkw7VCqoGQ4k6HUSn5Voqs+CJPJf+92oYLi24UKztR2ce8Gm8lklImu+iDi8biZDVY8ksSrjnwkAY7vU6ojCX2AWnYkwfdKR5IYzi0d4t5//9qz0xdFE1drud/I1Vr1GCkUCh/WfYxgrLHHiOr5hqdYrVb7ogsE24083wS4E/ZotSfw+XwvU6nUO4Sn2Wx+5yCoow19sJEevCcb+YsAz3yqR3yf05TFxhxs60+VI7bfPaa6EkCuWBv6jvZ/Q+3BdhXsNzv7qDIlA/TfAAAAAElFTkSuQmCC);-webkit-background-size:19px 19px}
+div.recipients{text-overflow:ellipsis;overflow:hidden}
+@media (prefers-dark-interface){.dialog-container{ background-color:#1b1b1b;color:rgba(255,255,255,.85)}
+}
+body.saga-welcome-page div.content{padding-right:100px;padding-left:100px;padding-bottom:70px;background:transparent}
+body.saga-welcome-page{background-color:#f5f5f5}
+body.saga-welcome-page:after{content:"";background:-webkit-gradient(linear,left top,left bottom,from( #fff),to( #f5f5f5));height:100px;width:100%;position:absolute;top:0;left:0;z-index:-1}
+body.saga-welcome-page h1{font-size:50px;color:#4e4e4e;text-align:center;font-family:Helvetica;background:url(desktop-finance/images/icloud/itunesmatch_title.png) bottom no-repeat;text-indent:-10000px;margin-bottom:12px}
+body.saga-welcome-page span.badge{position:absolute;top:58px;left:656px;font-size:20px;color:#848484}
+body.saga-welcome-page p.description{color:#808080;font-size:17px;text-align:center;line-height:24px;text-shadow:0 1px 0 rgba(255,255,255,1);padding-left:10px;padding-right:10px}
+body.saga-welcome-page p.description.wide{padding-left:0;padding-right:0}
+body.saga-welcome-page p.description.short{padding-left:65px;padding-right:65px}
+body.saga-welcome-page p.disclaimer{font-size:11px;color:#808080;text-align:center;margin-top:30px;margin:24px 58px 0;line-height:15px;text-shadow:0 1px 0 rgba(255,255,255,1)}
+body.saga-welcome-page p.footnote{font-size:12px;color:#808080;text-align:center;margin:11px 95px 0;line-height:18px;text-shadow:0 1px 0 rgba(255,255,255,1)}
+body.saga-welcome-page nav{margin:16px auto 0;text-align:center}
+body.saga-welcome-page nav a{-webkit-user-drag:none}
+body.saga-welcome-page nav a:hover{text-decoration:none}
+body.saga-welcome-page nav a.back,body.saga-welcome-page nav input.back,body.saga-welcome-page nav button.back{float:none;margin-right:5px}
+div.disclaimer-box{padding:12px 15px 16px 68px;background:url(desktop-finance/images/icloud/-dsi-/alert.png) 8px 50% no-repeat;-webkit-background-size:51px 53px;font-size:12px;line-height:16px;color:#5e5e5e;text-shadow:0 1px 0 rgba(255,255,255,1);width:747px;margin:13px auto 0;background-color:#ebebeb;border:1px solid #dadada;border-radius:5px}
+div.disclaimer-box h3{font-size:13px;font-weight:bold;color:#404040;margin-bottom:2px}
+div.welcome-content{margin:19px auto 13px;padding-bottom:0;width:574px;height:311px;position:relative;text-shadow:0 1px 0 rgba(255,255,255,1)}
+div.welcome-content div.instant-access{bottom:207px;left:40px;position:absolute;width:210px}
+div.welcome-content div.itunes-plus{top:190px;right:0;position:absolute;width:235px}
+div.welcome-content h2{color:#404040;font-size:13px;font-weight:bold;margin-top:10px}
+div.welcome-content h2+p{margin-top:2px}
+div.welcome-content p{color:#808080;font-size:13px;line-height:18px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical}
+img.add-computer{margin-top:14px}
+img.add-computer+div.disclaimer-box{margin-top:0}
+img.add-computer+div.disclaimer-box.error{margin-top:12px}
+img.add-computer+nav{margin-top:8px}
+div.disclaimer-box+nav{margin-top:14px}
+a.create-account{font-size:13px;color:#808080;text-align:center;text-shadow:0 1px 0 rgba(255,255,255,1);margin:30px auto 0;display:block}
+a.create-account+p.disclaimer{margin-top:15px}
+body.saga-welcome-page div.simple-footer,body.saga-welcome-page div.simple-footer a{color:#808080}
+body.saga-welcome-page div.simple-footer div.legal ul li{border-color:#808080}
+nav button{padding-left:16px;padding-right:16px}
+.dialog-container.terms-overlay{width:800px;max-height:none;padding:0}
+.dialog-container .dialog-content{margin:0 -6px}
+.saga-welcome-page .dialog-modal-shield{top:-10px;right:-10px;bottom:-10px;left:-10px;background:-webkit-radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,.4));z-index:30;cursor:pointer}
+.terms-overlay h2{font-size:17px;padding-bottom:15px;font-weight:bold}
+.terms-overlay .terms-wrapper{padding:15px 20px 0;font-size:13px}
+.terms-overlay .terms-content{margin:0 -21px;padding:10px 64px;overflow-y:scroll;height:320px;border:1px solid rgba(0,0,0,.1);border-width:1px 0;font-size:11px;line-height:15px;background:#f6f6f6 -webkit-gradient(linear,0 0,0 100%,from(transparent),to(rgba(0,0,0,.05)))}
+.terms-overlay .accept-terms{padding:17px 0 26px}
+.terms-overlay .agree-checkbox label{max-width:690px;vertical-align:top;padding-top:2px}
+.terms-overlay button.disabled{cursor:default}
+.terms-overlay.dialog-container .dialog-content{-webkit-transition:opacity .3s}
+nav button,nav input,form button,form input[type="submit"],input[type="button"],div.bubble input{-webkit-appearance:none;border:0;min-width:100px;line-height:16px;font-weight:bold;font-size:12px;color:#1b1b1b;border:1px solid rgba(130,130,130,.7);padding:2px;padding-left:10px;padding-right:10px;-webkit-border-radius:15px;background:-webkit-gradient(linear,left top,left bottom,from(#fff),color-stop(0.47, #e8e8e8),color-stop(0.50, #ddd),color-stop(0.54, #dcdcdc),to( #c6c6c6));text-shadow:rgba(255,255,255,.5) 0 1px 0}
+nav a:not(.disabled) button:active,nav>button:not(.disabled):active,nav input:not(:disabled):active,form button:active,form input[type="submit"]:not(:disabled):active,input[type="button"]:not(:disabled):active,div.bubble input:active{background:-webkit-gradient(linear,left top,left bottom,from( #c4c4c4),color-stop(0.54, #d0d0d0),to( #e4e4e4));text-shadow:none;-webkit-box-shadow:inset 0 0 2px rgba(255,255,255,.7)}
+nav a.disabled button,nav input.disabled,nav input:disabled,form input:disabled,div.bubble input:disabled{color:rgba(27,27,27,.5);pointer-events:auto}
+nav button.emphasized.disabled{color:rgba(255,255,255,.5);text-shadow:rgba(0,0,0,.13) 0 -1px 0;pointer-events:none}
+nav button.emphasized{background:-webkit-gradient(linear,left top,left bottom,from( #50a6e7),color-stop(0.47, #4092dd),color-stop(0.50, #3b8bd9),color-stop(0.53, #3988d8),to( #2e76cf));color:#fff;border:1px solid #3f80af;-webkit-box-shadow:inset 0 1px 1px rgba(255,255,255,.15);text-shadow:rgba(0,0,0,.25) 0 -1px 0}
+nav button.emphasized:not(.disabled):active{background:-webkit-gradient(linear,left top,left bottom,from( #3973c4),to( #4894cf));color:#fff;border:1px solid #3f80af;-webkit-box-shadow:inset 0 1px 1px rgba(255,255,255,.15);text-shadow:rgba(0,0,0,.15) 0 -1px 0}
+@media (-webkit-min-device-pixel-ratio: 2){body.saga-welcome-page h1{ background:url(desktop-finance/images/icloud/-dsi-/itunesmatch_title.png) bottom no-repeat;-webkit-background-size:339px 49px}
+}

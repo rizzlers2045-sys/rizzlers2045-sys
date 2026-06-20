@@ -1,0 +1,66 @@
+/*
+** Copyright © 2026 Apple Inc.
+** All rights reserved.
+*/
+
+div.footer>div.footer-breadcrumb{height:33px;padding-right:20px;margin:0 20px 11px 20px;border:1px solid #b6bcc2;border-bottom:1px solid #a7b1ba;background:-webkit-gradient(linear,left top,left bottom,from( #fff),to( #e4ecf2));-webkit-border-radius:4px}
+.lang-rtl div.footer>div.footer-breadcrumb{padding-right:unset;padding-left:20px}
+body.centered div.footer>div.footer-breadcrumb{-webkit-border-radius:4px}
+div.footer>div.footer-breadcrumb>a{float:left;padding:0 10px 0 15px;height:31px;line-height:31px;display:inline-block;font-size:11px;font-weight:bold}
+.lang-rtl div.footer>div.footer-breadcrumb>a{float:right;padding:0 15px 0 10px}
+div.footer>div.footer-breadcrumb span.itunes-logo{cursor:pointer;color:#4f5f6e}
+body.video div.footer>div.footer-breadcrumb span.itunes-logo{color:#c6c6c6}
+div.footer>div.footer-breadcrumb>ul.crumbs>li{display:inline-block;height:18px}
+div.footer>div.footer-breadcrumb>ul.crumbs>li:before{-webkit-mask-box-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAA+CAYAAAArvjtdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASFJREFUeNrsmMEGAkEYx0expz3tda/RKaLr0qk36LTP0GmJvXbqFBF76tQ1Yll6gyWWHmCJ6BrRqUTN8MU8wG8PZYaPPf18a37/b8YopdRF11tXqqAVC/CmK6CgR4FmFDAS4ENXh4IWAs0poOnsJdCIgmYCPFBAs8t3gcYUNBXgSZdHAL0mZb82IfvqJ2TfOdmd7E52J7uT/d9kbwEwX9dAvp9EdzPyl0NL8AUZQUSbrjUkEqK7XGA1Eb2ve9hwKAVWErCx1V1ETJhaYFuiuwkpsS++GeCS6G5OSmxHbEp0tybPj54VMUTigjyDh6TEZlXkPSYmJbYjhhyPCSlxYEUsJSN2JiQOZRMwiTcCqwhYn77q7slnlhEpcVuBT1UfAQYAsyeVO6OHEtoAAAAASUVORK5CYII=);vertical-align:top;content:"";display:inline-block;height:31px;width:10px;background-color:#4f5f6e;opacity:.3}
+div.footer>div.footer-breadcrumb>ul.crumbs>li>*{display:inline-block;font-size:11px;font-weight:bold;color:#4f5f6e;padding:0 10px 0 15px;height:31px;line-height:31px}
+div.footer>div.footer-breadcrumb>ul.crumbs>li>{display:inline-block;font-size:11px;font-weight:bold;color:#4f5f6e;padding:0 10px 0 15px;height:31px;line-height:31px}
+div.footer>div.footer-breadcrumb>ul.crumbs>li:last-child>*{text-overflow:ellipsis;white-space:nowrap;display:inline-block;overflow:hidden;max-width:400px}
+div.footer>div.footer-breadcrumb>ul.crumbs>li>*{text-overflow:ellipsis;white-space:nowrap;display:inline-block;overflow:hidden;max-width:150px}
+div.footer div.footer-links{margin:0 20px;min-height:122px}
+div.footer div.footer-links:after{content:"";display:block;clear:both}
+div.footer div.footer-links ul{float:left;margin-left:60px;min-width:60px}
+.lang-rtl div.footer div.footer-links ul{float:right;margin-right:60px;margin-left:unset}
+div.footer div.footer-links ul>li{margin:0;padding:0;line-height:13px}
+div.footer div.footer-links ul>li:first-child{margin-bottom:6px}
+div.footer div.footer-links ul>li>a,div.footer div.footer-links ul>li>span{text-overflow:ellipsis;white-space:nowrap;display:inline-block;overflow:hidden;max-width:120px;color:#4f5f6e;font-size:11px;font-weight:normal}
+div.footer div.footer-links ul>li:first-of-type>*{font-weight:bold}
+div.footer div.legal{margin:22px 55px 0 20px;border-top:1px solid #aab8c5;padding-top:2px;position:relative}
+.lang-rtl div.footer div.legal{margin:22px 20px 0 55px}
+div.footer div.legal *{color:#4f5f6e;display:inline-block;color:#4f5f6e;font-size:10px;font-weight:normal}
+body.video div.footer div.legal *{color:#C6C6C6}
+div.footer div.legal>span{margin-right:5px}
+.lang-rtl div.footer div.legal>span{margin-left:5px;margin-right:unset}
+div.footer div.legal>ul>li:not(:last-child):after{content:"|";padding-left:3px}
+.lang-rtl div.footer div.legal>ul>li:not(:last-child):after{padding-left:unset;padding-right:3px}
+div.footer div.legal div.intl{position:absolute;top:-12px;right:-39px}
+.lang-rtl div.footer div.legal div.intl{right:unset;left:-39px}
+body.video div.footer>div.footer-breadcrumb{border:1px solid #353535;border-bottom:1px solid #2d2d2d;background:-webkit-gradient(linear,left top,left bottom,from( #191919),to( #080808))}
+body.video div.footer>div.footer-breadcrumb>ul.crumbs>li>*{color:#c6c6c6}
+body.video div.footer>div.footer-breadcrumb>ul.crumbs>li:before{background-color:#353535;opacity:1.0}
+body.video div.footer div.footer-links ul>li a,body.video div.footer div.footer-links ul>li span{color:#c6c6c6}
+body.video div.footer div.legal{border-top-color:#575757}
+body.tracks div.footer>div.footer-breadcrumb{margin:0 0 15px 0;-webkit-border-radius:0;border-left:0;border-right:0}
+div.simple-footer{position:absolute;width:100%;bottom:18px;left:0;font-size:11px;text-align:center}
+div.simple-footer div.legal{display:inline-block}
+div.simple-footer div.legal ul,div.simple-footer div.legal ul li{display:inline-block;margin:0}
+div.simple-footer div.legal ul li{padding:0 8px;border-right:1px solid #808080;line-height:14px}
+div.simple-footer div.legal ul li:last-child{border-right:0}
+@media (prefers-dark-interface){div.footer div.footer-links ul>li>a,div.footer div.footer-links ul>li>span{ color:rgba(255,255,255,.55)}
+div.footer div.footer-links ul>li:first-of-type>*{color:rgba(255,255,255,.55)}
+div.footer div.legal *{color:rgba(255,255,255,.55)}
+div.footer div.legal{border-top-color:rgba(255,255,255,.1)}
+}
+html,body{height:100%}
+body div.content{min-height:100%;margin:0 auto -35px;padding:20px 20px 90px;position:relative;min-width:949px;max-width:949px;width:949px}
+body.full-footer div.content{padding-bottom:248px}
+body>div.content:after{content:" ";clear:both;display:block;float:none}
+div.footer{position:absolute;bottom:16px;left:0;width:100%}
+div.footer:after{content:" ";clear:both;display:block}
+footer{font-size:10px;color:#4c4c4c;line-height:30px;text-align:left}
+footer div.legal{margin:0 35px 0 0;border-top:1px solid #d3d7db;position:relative}
+footer.no-country-nav div.legal{margin-right:0}
+footer div.legal *{color:#4c4c4c;display:inline-block;color:#4f5f6e;font-size:10px;font-weight:normal;text-shadow:#fff 0 1px 0}
+footer div.legal>span{margin-right:5px}
+footer div.legal li a{color:#576982}
+footer div.legal>ul>li:not(:last-child):after{content:"|";padding-left:7px;margin-right:3px}
+footer div.legal div.intl{position:absolute;top:-12px;right:-39px}
